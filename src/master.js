@@ -2,4 +2,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './master.scss';
 
-console .log( `Hola Mundo con Vanilla JavaScript` );
+/** Router */
+import { router } from './router/index.routes';
+
+/** El evento hashchange es ejecutado cuando el fragmento identificador de la URL ha cambiado */
+window .addEventListener( 'hashchange', () => {
+    //console .log( 'Hash', window .location .hash );     
+    router( window .location .hash );                   /** Devuelve una cadena USVString que contiene un '#' seguido del identificador de fragmento de la URL. */
+});
