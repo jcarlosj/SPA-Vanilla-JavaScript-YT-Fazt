@@ -1,4 +1,4 @@
 /** Incluye CSS */
-import './master.css';
+import './master.scss';
 
 console .log( `Hola Mundo con Vanilla JavaScript` );
