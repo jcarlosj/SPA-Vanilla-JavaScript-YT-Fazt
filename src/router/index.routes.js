@@ -1,5 +1,6 @@
-/** Views */
+/** Controllers */
 import Home from '../controllers/index.controller';
+import Posts from '../controllers/posts.controller';
 
 let content = document .querySelector( '#root' );
 
@@ -15,8 +16,9 @@ const router = ( route ) => {
         }
         case '#/products':
             return console .log( `Products Page` );    
-        case '#/posts':
-            return console .log( `Posts Page` );
+        case '#/posts': {
+            return content .appendChild( Posts() );    // Agrega el contenido a la vista
+        }
         default: 
             return console .log( `404 Page!!!` );
     }
