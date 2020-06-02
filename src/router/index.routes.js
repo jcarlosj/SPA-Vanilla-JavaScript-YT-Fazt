@@ -3,7 +3,7 @@ import controller from '../controllers/index';
 
 let content = document .querySelector( '#root' );
 
-const router = ( route ) => {
+const router = async ( route ) => {
     console .log( 'Route', route );
 
     /** Limpia la vista (el elemento) cada que una ruta es solicitada */
@@ -16,7 +16,7 @@ const router = ( route ) => {
         case '#/products':
             return console .log( `Products Page` );    
         case '#/posts': {
-            return content .appendChild( controller .posts() );    // Agrega el contenido a la vista
+            return content .appendChild( await controller .posts() );    // Agrega el contenido a la vista
         }
         default: 
             return console .log( `404 Page!!!` );
