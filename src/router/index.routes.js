@@ -1,6 +1,5 @@
 /** Controllers */
-import Home from '../controllers/index.controller';
-import Posts from '../controllers/posts.controller';
+import controller from '../controllers/index';
 
 let content = document .querySelector( '#root' );
 
@@ -12,12 +11,12 @@ const router = ( route ) => {
 
     switch( route ) {
         case '#/': {
-            return content .appendChild( Home() );     // Agrega el contenido a la vista
+            return content .appendChild( controller .home() );     // Agrega el contenido a la vista
         }
         case '#/products':
             return console .log( `Products Page` );    
         case '#/posts': {
-            return content .appendChild( Posts() );    // Agrega el contenido a la vista
+            return content .appendChild( controller .posts() );    // Agrega el contenido a la vista
         }
         default: 
             return console .log( `404 Page!!!` );

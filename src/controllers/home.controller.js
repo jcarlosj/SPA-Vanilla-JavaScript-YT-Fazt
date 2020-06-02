@@ -1,4 +1,4 @@
-import view from '../views/index.html';
+import view from '../views/home.html';
 
 export default () => {
 
