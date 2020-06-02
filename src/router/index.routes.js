@@ -1,5 +1,5 @@
 /** Views */
-import Home from '../views/home';
+import Home from '../controllers/index.controller';
 
 let content = document .querySelector( '#root' );
 
