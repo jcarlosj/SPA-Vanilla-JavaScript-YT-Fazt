@@ -1,9 +1,19 @@
 body {
     background-color: white;
+}
 
+.page {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.page-home {
     h1 {
-        color: red;
-        text-align: center;
+        color: #222222;
         text-transform: uppercase;
+    }
+    p {
+        color: #333333;
     }
 }

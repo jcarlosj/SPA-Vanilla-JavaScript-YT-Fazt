@@ -1,9 +1,18 @@
+/** Views */
+import Home from '../views/home';
+
+let content = document .querySelector( '#root' );
+
 const router = ( route ) => {
     console .log( 'Route', route );
 
+    /** Limpia la vista (el elemento) cada que una ruta es solicitada */
+    content .innerHTML = '';       
+
     switch( route ) {
-        case '#/':
-            return console .log( 'Route', route,`Home Page` );
+        case '#/': {
+            return content .appendChild( Home() );     // Agrega el contenido a la vista
+        }
         case '#/products':
             return console .log( `Products Page` );    
         case '#/posts':
