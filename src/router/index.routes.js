@@ -10,16 +10,14 @@ const router = async ( route ) => {
     content .innerHTML = '';       
 
     switch( route ) {
-        case '#/': {
+        case '#/': 
             return content .appendChild( controller .home() );     // Agrega el contenido a la vista
-        }
         case '#/products':
             return console .log( `Products Page` );    
-        case '#/posts': {
+        case '#/posts': 
             return content .appendChild( await controller .posts() );    // Agrega el contenido a la vista
-        }
-        default: 
-            return console .log( `404 Page!!!` );
+        default:
+            return content .appendChild( await controller .notFound() ); // Agrega el contenido a la vista
     }
 }
 
